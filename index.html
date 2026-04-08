@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>UrbanFashion | Toko Online Modern</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <!-- Toast Notification Container -->
+  <div id="toastContainer" class="toast-container"></div>
+
+  <header class="main-header">
+    <div class="container header-container">
+      <div class="logo">
+        <i class="fas fa-feather-alt"></i>
+        <h1>Urban<span>Fashion</span></h1>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar">
+    <div class="container nav-container">
+      <!-- TOMBOL TOGGLE UNTUK MOBILE (TAMBAHAN) -->
+      <button class="menu-toggle" id="menuToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link active"><i class="fas fa-home"></i> Beranda</a></li>
+        <li><a href="#products" class="nav-link"><i class="fas fa-tshirt"></i> Koleksi</a></li>
+        <li><a href="#order-form" class="nav-link"><i class="fas fa-shopping-cart"></i> Form Pemesanan</a></li>
+        <li><a href="#dynamic-shop" class="nav-link"><i class="fas fa-magic"></i> Custom Item</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-content">
+        <div class="hero-badge">NEW SEASON 2026</div>
+        <h2>Elevate Your <span>Street Style</span></h2>
+        <p>Koleksi eksklusif dengan bahan premium. Nyaman dipakai, tampil beda.</p>
+        <a href="#order-form" class="btn-primary pulse"><i class="fas fa-hand-peace"></i> Pesan Sekarang</a>
+      </div>
+    </section>
+
+    <!-- Produk statis -->
+    <section id="products" class="products-section">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-crown"></i> Best Seller</h2>
+          <div class="title-line"></div>
+        </div>
+        <div class="product-cards">
+          <div class="card">
+            <div class="card-image">
+                <img src="./img/jaket.png" alt="Jaket Kulit Hitam">
+            </div>
+            <div class="card-body">
+              <h3>Jaket Pria Kulit Hitam</h3>
+              <p class="price">Rp 359.000</p>
+              <a href="#order-form" class="btn-buy-trigger"><i class="fas fa-cart-plus"></i> Beli</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+                <img src="./img/gaun.png" alt="Gaun Biru">
+            </div>
+            <div class="card-body">
+              <h3>Gaun Malam Biru Elegan</h3>
+              <p class="price">Rp 279.000</p>
+              <a href="#order-form" class="btn-buy-trigger"><i class="fas fa-cart-plus"></i> Beli</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+                <img src="./img/sneakers.png" alt="Sneakers White">
+            </div>
+            <div class="card-body">
+              <h3>Sneakers White</h3>
+              <p class="price">Rp 489.000</p>
+              <a href="#order-form" class="btn-buy-trigger"><i class="fas fa-cart-plus"></i> Beli</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-image">
+                <img src="./img/varsity.png" alt="Varsity Jacket">
+            </div>
+            <div class="card-body">
+              <h3>Varsity Jacket</h3>
+              <p class="price">Rp 129.000</p>
+              <a href="#order-form" class="btn-buy-trigger"><i class="fas fa-cart-plus"></i> Beli</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Pemesanan -->
+    <section id="order-form" class="order-section">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-clipboard-list"></i> Form Pemesanan</h2>
+          <div class="title-line"></div>
+          <p>Lengkapi data untuk membeli produk favoritmu</p>
+        </div>
+        <div class="form-wrapper glass-card">
+          <form id="purchaseForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fas fa-user"></i> Nama Lengkap <span class="required">*</span></label>
+                <input type="text" id="fullname" placeholder="Contoh: Ahmad Rizki" required>
+                <div class="error-message" id="error-fullname"></div>
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-envelope"></i> Email <span class="required">*</span></label>
+                <input type="email" id="email" placeholder="email@domain.com" required>
+                <div class="error-message" id="error-email"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fas fa-dollar-sign"></i> Nominal Bayar (Rp) <span class="required">*</span></label>
+                <input type="number" id="amount" placeholder="Minimal 10000" step="1000" required>
+                <div class="error-message" id="error-amount"></div>
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-phone-alt"></i> No. Telepon <span class="required">*</span></label>
+                <input type="tel" id="phone" placeholder="0812-3456-7890" required>
+                <div class="error-message" id="error-phone"></div>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label><i class="fas fa-tag"></i> Pilih Produk <span class="required">*</span></label>
+                <select id="productSelect" required>
+                  <option value="">-- Pilih Produk --</option>
+                  <option value="Jaket Pria Kulit Hitam - Rp359.000">Jaket Pria Kulit Hitam - Rp359.000</option>
+                  <option value="Gaun Malam Biru Elegan - Rp279.000">Gaun Malam Biru Elegan - Rp279.000</option>
+                  <option value="Sneakers White - Rp489.000">Sneakers White - Rp489.000</option>
+                  <option value="Varsity Jacket - Rp129.000">Varsity Jacket - Rp129.000</option>
+                </select>
+                <div class="error-message" id="error-product"></div>
+              </div>
+              <div class="form-group">
+                <label><i class="fas fa-ruler"></i> Ukuran <span class="required">*</span></label>
+                <div class="radio-group">
+                  <label><input type="radio" name="size" value="S" required> S</label>
+                  <label><input type="radio" name="size" value="M"> M</label>
+                  <label><input type="radio" name="size" value="L"> L</label>
+                  <label><input type="radio" name="size" value="XL"> XL</label>
+                </div>
+                <div class="error-message" id="error-size"></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-shipping-fast"></i> Metode Pengiriman <span class="required">*</span></label>
+              <div class="checkbox-group">
+                <label><input type="checkbox" name="shipping" value="Reguler"> Reguler (3-5 hari)</label>
+                <label><input type="checkbox" name="shipping" value="Ekspres"> Ekspres (1-2 hari)</label>
+                <label><input type="checkbox" name="shipping" value="Instant"> Instant (Same Day)</label>
+              </div>
+              <div class="error-message" id="error-shipping"></div>
+            </div>
+
+            <div class="form-group">
+              <label><i class="fas fa-map-marker-alt"></i> Alamat Lengkap <span class="required">*</span></label>
+              <textarea id="address" rows="3" placeholder="Jl. Contoh No. 12, RT/RW, Kelurahan, Kecamatan, Kota"></textarea>
+              <div class="error-message" id="error-address"></div>
+            </div>
+
+            <button type="submit" class="btn-submit"><i class="fas fa-check-circle"></i> Konfirmasi Pesanan</button>
+            <div id="formSuccessMessage" class="success-message" style="display: none;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dynamic shop -->
+    <section id="dynamic-shop" class="dynamic-section">
+      <div class="container">
+        <div class="section-title">
+          <h2><i class="fas fa-store"></i> Gallery Kustom</h2>
+          <div class="title-line"></div>
+          <p>Tambah koleksi pribadimu + foto unik</p>
+        </div>
+        <div class="dynamic-controls glass-card">
+          <div class="add-item-form">
+            <input type="text" id="newItemName" placeholder="Nama item" required>
+            <input type="number" id="newItemPrice" placeholder="Harga (Rp)" required>
+            <label class="file-upload-btn"><i class="fas fa-image"></i> Upload Gambar
+              <input type="file" id="itemImage" accept="image/*" style="display: none;">
+            </label>
+            <button id="addItemBtn" class="btn-primary"><i class="fas fa-plus-circle"></i> Tambah Item</button>
+          </div>
+        </div>
+        <div id="dynamicItemList" class="dynamic-item-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer">
+    <div class="container footer-container">
+      <p><i class="far fa-copyright"></i> 2026 UrbanFashion — UMSU Teknologi Informasi</p>
+      <div class="social-icons">
+        <i class="fab fa-tiktok"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-discord"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
