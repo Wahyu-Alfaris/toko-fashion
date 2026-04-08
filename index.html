@@ -5,8 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <title>UrbanFashion | Toko Online Modern</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Font Awesome tetap menggunakan CDN tapi dengan loading lebih cepat -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"></noscript>
 </head>
 <body>
 
@@ -24,7 +26,7 @@
 
   <nav class="navbar">
     <div class="container nav-container">
-      <!-- TOMBOL TOGGLE UNTUK MOBILE (TAMBAHAN) -->
+      <!-- TOMBOL TOGGLE UNTUK MOBILE -->
       <button class="menu-toggle" id="menuToggle">
         <i class="fas fa-bars"></i>
       </button>
@@ -59,7 +61,7 @@
         <div class="product-cards">
           <div class="card">
             <div class="card-image">
-                <img src="./img/jaket.png" alt="Jaket Kulit Hitam">
+                <img src="./img/jaket.png" alt="Jaket Kulit Hitam" loading="lazy">
             </div>
             <div class="card-body">
               <h3>Jaket Pria Kulit Hitam</h3>
@@ -69,7 +71,7 @@
           </div>
           <div class="card">
             <div class="card-image">
-                <img src="./img/gaun.png" alt="Gaun Biru">
+                <img src="./img/gaun.png" alt="Gaun Biru" loading="lazy">
             </div>
             <div class="card-body">
               <h3>Gaun Malam Biru Elegan</h3>
@@ -79,7 +81,7 @@
           </div>
           <div class="card">
             <div class="card-image">
-                <img src="./img/sneakers.png" alt="Sneakers White">
+                <img src="./img/sneakers.png" alt="Sneakers White" loading="lazy">
             </div>
             <div class="card-body">
               <h3>Sneakers White</h3>
@@ -89,7 +91,7 @@
           </div>
           <div class="card">
             <div class="card-image">
-                <img src="./img/varsity.png" alt="Varsity Jacket">
+                <img src="./img/varsity.png" alt="Varsity Jacket" loading="lazy">
             </div>
             <div class="card-body">
               <h3>Varsity Jacket</h3>
